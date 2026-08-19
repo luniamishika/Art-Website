@@ -73,7 +73,7 @@ def page(title: str, active: str, body: str, extra_head: str = "", prefix: str =
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title} - Mishika Lunia</title>
   <meta name="description" content="mishika lunia- painting" />
-  <link rel="icon" href="{prefix}images/favicon.png" type="image/png" />
+  <link rel="icon" href="{prefix}images/favicon.png?v=2" type="image/png" />
   <link rel="stylesheet" href="{prefix}css/style.css" />
   {extra_head}
 </head>
