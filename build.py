@@ -51,7 +51,7 @@ def sidebar(active: str, prefix: str = "") -> str:
         items.append(f'        <li class="item{sel}"><a href="{prefix}{href}">{label}</a></li>')
     nav = "\n".join(items)
     return f"""    <header class="nav-wrapper">
-      <a href="{prefix}index.html" class="logo">MISHIKA LUNIA</a>
+      <a href="{prefix}index.html" class="logo"><img class="logo-mark" src="{prefix}images/favicon.png" alt="" />MISHIKA LUNIA</a>
       <nav id="menu">
         <ul>
 {nav}
@@ -73,14 +73,14 @@ def page(title: str, active: str, body: str, extra_head: str = "", prefix: str =
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title} - Mishika Lunia</title>
   <meta name="description" content="mishika lunia- painting" />
-  <link rel="icon" href="{prefix}images/favicon.jpg" />
+  <link rel="icon" href="{prefix}images/favicon.png" type="image/png" />
   <link rel="stylesheet" href="{prefix}css/style.css" />
   {extra_head}
 </head>
 <body class="{body_class}">
   <div class="site">
     <aside class="mobile-bar">
-      <a href="{prefix}index.html" class="logo">MISHIKA LUNIA</a>
+      <a href="{prefix}index.html" class="logo"><img class="logo-mark" src="{prefix}images/favicon.png" alt="" />MISHIKA LUNIA</a>
       <button class="hamburger" aria-label="Menu"><span></span></button>
     </aside>
 {sidebar(active, prefix)}
