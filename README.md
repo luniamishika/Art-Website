@@ -1,4 +1,4 @@
-# Mishika Lunia
+# Misha Lunia
 
 Artist site for ceramics and a small shop.
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Mishika Lunia studio site."""
+"""Build the Misha Lunia studio site."""
 from __future__ import annotations
 
 import html as htmlmod
@@ -49,7 +49,7 @@ def sidebar(active: str, prefix: str = "") -> str:
         items.append(f'        <li class="item{sel}"><a href="{prefix}{href}">{label}</a></li>')
     nav = "\n".join(items)
     return f"""    <header class="nav-wrapper">
-      <a href="{prefix}index.html" class="logo">MISHIKA LUNIA</a>
+      <a href="{prefix}index.html" class="logo">MISHA LUNIA</a>
       <nav id="menu">
         <ul>
 {nav}
@@ -69,8 +69,8 @@ def page(title: str, active: str, body: str, extra_head: str = "", prefix: str =
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{title} - Mishika Lunia</title>
-  <meta name="description" content="mishika lunia- painting" />
+  <title>{title}</title>
+  <meta name="description" content="Artist site: art gallery, shop, and about." />
   <link rel="icon" href="{prefix}images/favicon.png?v=2" type="image/png" />
   <link rel="stylesheet" href="{prefix}css/style.css" />
   {extra_head}
@@ -78,7 +78,7 @@ def page(title: str, active: str, body: str, extra_head: str = "", prefix: str =
 <body class="{body_class}">
   <div class="site">
     <aside class="mobile-bar">
-      <a href="{prefix}index.html" class="logo">MISHIKA LUNIA</a>
+      <a href="{prefix}index.html" class="logo">MISHA LUNIA</a>
       <button class="hamburger" aria-label="Menu"><span></span></button>
     </aside>
 {sidebar(active, prefix)}
@@ -211,14 +211,14 @@ def main() -> None:
 
     about_body = f"""      <div class="about-hero">
         <div>
-          <h2>Mishika Lunia</h2>
+          <h2>Misha Lunia</h2>
           <p>Artist and ceramicist based in Indore, India. Clay is at the centre of her work: functional ware and sculpture. She has been making ceramics for six months.</p>
           <p>She picked clay because it is physical. She likes to touch it — it grounds her and reconnects her with herself. She works in stoneware and earthenware from Bhoomi Pottery.</p>
           <p>She works from her home studio. When she is uninspired, she goes to Studio Folklore.</p>
           <p>She is also an academic.</p>
           <p>Reach me at <a href="mailto:mishikalunia@gmail.com">mishikalunia[at]gmail[dot]com</a></p>
         </div>
-        <img src="images/about/portrait.png" alt="Mishika Lunia" />
+        <img src="images/about/portrait.png" alt="Misha Lunia" />
       </div>
       <div class="cv">
         <hr class="cv-rule" />
