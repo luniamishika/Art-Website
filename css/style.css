@@ -384,7 +384,9 @@ html.lightbox-active body {
 
 .cv-rule {
   border: 0;
-  border-top: 1px solid #000;
+  text-align: center;
+  color: #ccc;
+  letter-spacing: 0.2em;
   margin: 0 0 28px;
 }
 
