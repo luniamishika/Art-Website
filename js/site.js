@@ -76,7 +76,7 @@
     }
 
     items.forEach(function (el, i) {
-      // TODO: once real images are added to ceramics / other mediums,
+      // TODO: once real images are added to ceramics,
       // restore click-to-open lightbox (each .asset should be a link/img
       // with data-full). This skip is only for the black placeholders.
       if (!el.querySelector("img") && !el.getAttribute("data-full")) return;
@@ -113,15 +113,7 @@
   if (cart) {
     cart.addEventListener("click", function (e) {
       e.preventDefault();
-      var name = cart.getAttribute("data-name") || "an item";
-      var price = cart.getAttribute("data-price") || "";
-      var qty = document.getElementById("qty");
-      var n = qty ? qty.value : "1";
-      var subject = encodeURIComponent("Order: " + name);
-      var body = encodeURIComponent(
-        "Hi Mishika,\n\nI would like to order " + n + " of:\n" + name + " (" + price + ").\n\nThank you!"
-      );
-      window.location.href = "mailto:mishikalunia@gmail.com?subject=" + subject + "&body=" + body;
+      toast("currently out of stock");
     });
   }
 
@@ -134,6 +126,6 @@
     }
     t.textContent = msg;
     t.classList.add("show");
-    setTimeout(function () { t.classList.remove("show"); }, 1800);
+    setTimeout(function () { t.classList.remove("show"); }, 2500);
   }
 })();

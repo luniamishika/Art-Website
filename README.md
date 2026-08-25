@@ -1,11 +1,10 @@
 # Mishika Lunia
 
-Artist site for ceramics, other mediums, and a small shop.
+Artist site for ceramics and a small shop.
 
 **Pages**
 
-- [Ceramics](index.html) — gallery
-- [Other mediums](other-mediums.html) — gallery
+- [Art gallery](index.html)
 - [Shop](shop.html) — cups and mugs
 - [About](about.html)
 

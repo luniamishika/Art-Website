@@ -17,8 +17,7 @@ UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit
 CTX = ssl.create_default_context()
 
 NAV = [
-    ("index.html", "ceramics", "ceramics"),
-    ("other-mediums.html", "other mediums", "painting"),
+    ("index.html", "art gallery", "ceramics"),
     ("shop.html", "shop", "classes"),
     ("about.html", "about", "about"),
 ]
@@ -29,7 +28,6 @@ INSTA_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class
 
 PREFIX = {
     "index.html": "",
-    "other-mediums.html": "",
     "shop.html": "",
     "about.html": "",
 }
@@ -172,8 +170,7 @@ def main() -> None:
         if src.exists():
             fav.write_bytes(src.read_bytes())
 
-    (ROOT / "index.html").write_text(page("ceramics", "ceramics", gallery_body("ceramics", ceramics), body_class="gallery"))
-    (ROOT / "other-mediums.html").write_text(page("other mediums", "painting", gallery_body("painting", painting), body_class="gallery"))
+    (ROOT / "index.html").write_text(page("art gallery", "ceramics", gallery_body("ceramics", ceramics), body_class="gallery"))
 
     cards = []
     for i, p in enumerate(classes):
@@ -215,22 +212,25 @@ def main() -> None:
     about_body = f"""      <div class="about-hero">
         <div>
           <h2>Mishika Lunia</h2>
-          <p>Artist and ceramicist based in India. Clay is the centre of the work: functional ware and sculpture. She has been making ceramics for six months.</p>
-          <p>Wildlife and travel photography sit alongside that practice.</p>
+          <p>Artist and ceramicist based in India. Clay is at the centre of her work: functional ware and sculpture. She has been making ceramics for six months.</p>
+          <p>She picked clay because it is physical. She likes to touch it — it grounds her and reconnects her with herself. She works in stoneware and earthenware from Bhoomi Pottery.</p>
           <p>She is also an academic.</p>
-          <p>You can reach me at <a href="mailto:mishikalunia@gmail.com">mishikalunia@gmail.com</a></p>
+          <p>Reach me at <a href="mailto:mishikalunia@gmail.com">mishikalunia[at]gmail[dot]com</a></p>
         </div>
         <img src="images/about/portrait.png" alt="Mishika Lunia" />
       </div>
       <div class="cv">
         <hr class="cv-rule" />
         <p><b>SELECTED EXHIBITIONS</b></p>
+        <p>to be updated....</p>
+        <!--
         <p class="year">2022</p>
         <p>Slabs for the Lobster Paw, Fraser Cultural Center, Tatamagouche, NS</p>
         <p>Elora Fergus Studio Tour Members show, Elora Center for the Arts, Elora, ON</p>
         <p class="section"><b>AWARDS</b></p>
         <p>Project 31 Drawing and Painting Award</p>
         <p>Mrs. W.O. Forsyth Award</p>
+        -->
       </div>"""
     (ROOT / "about.html").write_text(page("about", "about", about_body, body_class="content"))
     print("HTML written")
