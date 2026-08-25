@@ -166,7 +166,11 @@ a:hover {
   float: left;
   padding: 0 5% 5% 0;
   display: block;
-  cursor: default; /* TODO: set back to zoom-in when real gallery images are added */
+  cursor: default;
+}
+
+.asset:has(img) {
+  cursor: zoom-in;
 }
 
 .masonry::after {

@@ -57,14 +57,17 @@
   if (lightbox) {
     var imgEl = lightbox.querySelector("img");
     var capEl = lightbox.querySelector(".caption");
-    var items = Array.prototype.slice.call(document.querySelectorAll(".asset"));
+    var items = Array.prototype.slice.call(document.querySelectorAll(".asset")).filter(function (el) {
+      return el.querySelector("img") || el.getAttribute("data-full");
+    });
     var index = 0;
 
     function show(i) {
       if (!items.length) return;
       index = (i + items.length) % items.length;
       var el = items[index];
-      imgEl.src = el.getAttribute("data-full") || el.querySelector("img").src;
+      var img = el.querySelector("img");
+      imgEl.src = el.getAttribute("data-full") || (img && img.src) || "";
       capEl.innerHTML = el.getAttribute("data-copy") || "";
       lightbox.classList.add("open");
       document.documentElement.classList.add("lightbox-active");
@@ -76,10 +79,6 @@
     }
 
     items.forEach(function (el, i) {
-      // TODO: once real images are added to ceramics,
-      // restore click-to-open lightbox (each .asset should be a link/img
-      // with data-full). This skip is only for the black placeholders.
-      if (!el.querySelector("img") && !el.getAttribute("data-full")) return;
       el.addEventListener("click", function (e) {
         e.preventDefault();
         show(i);
