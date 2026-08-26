@@ -185,9 +185,18 @@ a:hover {
 }
 
 .asset .black {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  background: #000;
+  background: #e6e6e6;
+  color: #888;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.asset .black::after {
+  content: "coming soon";
 }
 
 .mobile-bar {
