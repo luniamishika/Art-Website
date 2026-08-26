@@ -9,7 +9,6 @@ Artist site for ceramics and a small shop.
 - [About](about.html)
 
 Instagram: [mishaisnotdeadyet](https://www.instagram.com/mishaisnotdeadyet/)  
-Email: [mishikalunia@gmail.com](mailto:mishikalunia@gmail.com)
 
 ## Run locally
 
