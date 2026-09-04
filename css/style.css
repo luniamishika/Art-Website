@@ -251,7 +251,7 @@ body.work #content {
 .work-page {
   max-width: 720px;
   margin: 0 auto;
-  padding: 0 16px 60px;
+  padding: 28px 16px 60px;
   text-align: center;
 }
 
@@ -280,9 +280,9 @@ body.work #content {
 }
 
 body.work .back-link {
-  display: block;
-  margin: 0 auto 12px;
-  text-align: center;
+  display: inline-block;
+  margin: 0 0 8px 2%;
+  text-align: left;
 }
 
 .work-more {
