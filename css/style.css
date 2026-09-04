@@ -787,7 +787,7 @@ body.product .back-link {
     top: 56px;
     left: 0;
     overflow-y: auto;
-    padding: 16px 24px 32px;
+    padding: 4px 24px 20px;
     border-bottom: 1px solid #eee;
   }
 
@@ -797,6 +797,10 @@ body.product .back-link {
 
   .nav-wrapper > .logo {
     display: none;
+  }
+
+  #menu {
+    margin-top: 0;
   }
 
   .mobile-bar {
