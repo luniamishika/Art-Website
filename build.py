@@ -183,7 +183,8 @@ def main() -> None:
           <div class="price">${p["price"]} CAD</div>
         </a>'''
         )
-    classes_body = f"""      <section class="product-grid">
+    classes_body = f"""      <h1 class="page-heading">shop</h1>
+      <section class="product-grid">
 {chr(10).join(cards)}
       </section>"""
     (ROOT / "shop.html").write_text(page("shop", "classes", classes_body, body_class="store"))

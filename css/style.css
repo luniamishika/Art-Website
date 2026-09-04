@@ -428,6 +428,13 @@ html.lightbox-active body {
   padding: 0 2% 40px;
 }
 
+.page-heading {
+  font-size: 22px;
+  font-weight: 400;
+  color: #2c2c2c;
+  padding: 0 2% 24px;
+}
+
 .product-card {
   text-align: center;
   color: inherit;
@@ -564,6 +571,10 @@ html.lightbox-active body {
 
   body.menu-open .nav-wrapper {
     display: block;
+  }
+
+  .nav-wrapper > .logo {
+    display: none;
   }
 
   .mobile-bar {
