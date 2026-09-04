@@ -158,7 +158,7 @@ a:hover {
 }
 
 .store #content {
-  padding-top: 0;
+  padding-top: 20px;
 }
 
 body.work #content {
@@ -413,12 +413,13 @@ body.cart-open .cart-drawer {
 }
 
 .hamburger {
-  width: 28px;
-  height: 18px;
+  width: 40px;
+  height: 40px;
   position: relative;
   cursor: pointer;
   background: none;
   border: none;
+  flex-shrink: 0;
 }
 
 .hamburger span,
@@ -426,22 +427,22 @@ body.cart-open .cart-drawer {
 .hamburger::after {
   content: "";
   position: absolute;
-  left: 0;
-  width: 100%;
+  left: 9px;
+  width: 22px;
   height: 2px;
   background: #222;
 }
 
 .hamburger span {
-  top: 8px;
+  top: 19px;
 }
 
 .hamburger::before {
-  top: 0;
+  top: 13px;
 }
 
 .hamburger::after {
-  bottom: 0;
+  top: 25px;
 }
 
 body.menu-open .hamburger span {
@@ -449,12 +450,12 @@ body.menu-open .hamburger span {
 }
 
 body.menu-open .hamburger::before {
-  top: 8px;
+  top: 19px;
   transform: rotate(45deg);
 }
 
 body.menu-open .hamburger::after {
-  bottom: 8px;
+  top: 19px;
   transform: rotate(-45deg);
 }
 
@@ -800,7 +801,8 @@ html.lightbox-active body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 16px;
+    padding: 8px 8px 8px 16px;
+    min-height: 56px;
     position: sticky;
     top: 0;
     background: #fff;
@@ -815,11 +817,10 @@ html.lightbox-active body {
 
   .mobile-bar .hamburger {
     margin-right: 48px;
-    flex-shrink: 0;
   }
 
   .cart-btn {
-    top: 6px;
+    top: 8px;
     right: 8px;
     z-index: 41;
   }
