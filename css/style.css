@@ -743,7 +743,7 @@ html.lightbox-active body {
 .back-link {
   display: inline-block;
   margin: 0 0 20px 2%;
-  color: var(--muted);
+  color: #444;
 }
 
 body.product .back-link {
