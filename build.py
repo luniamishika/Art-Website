@@ -81,6 +81,9 @@ def page(title: str, active: str, body: str, extra_head: str = "", prefix: str =
       <a href="{prefix}index.html" class="logo">MISHA LUNIA</a>
       <button class="hamburger" aria-label="Menu"><span></span></button>
     </aside>
+    <button type="button" class="cart-btn" aria-label="Cart">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M6 7h15l-1.5 9h-12z"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M6 7 5 4H2"/><circle cx="9" cy="20" r="1.3" fill="currentColor"/><circle cx="18" cy="20" r="1.3" fill="currentColor"/></svg>
+    </button>
 {sidebar(active, prefix)}
     <main id="content">
 {body}
@@ -183,7 +186,7 @@ def main() -> None:
           <div class="price">${p["price"]} CAD</div>
         </a>'''
         )
-    classes_body = f"""      <h1 class="page-heading">shop</h1>
+    classes_body = f"""      <h1 class="page-heading">Shop</h1>
       <section class="product-grid">
 {chr(10).join(cards)}
       </section>"""

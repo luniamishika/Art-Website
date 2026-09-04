@@ -108,13 +108,12 @@
     });
   }
 
-  var cart = document.querySelector(".add-cart");
-  if (cart) {
-    cart.addEventListener("click", function (e) {
+  document.querySelectorAll(".cart-btn, .add-cart").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
       e.preventDefault();
       toast("currently out of stock");
     });
-  }
+  });
 
   function toast(msg) {
     var t = document.querySelector(".toast");
