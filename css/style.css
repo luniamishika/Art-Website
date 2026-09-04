@@ -314,6 +314,100 @@ body.work .back-link {
   display: block;
 }
 
+.cart-drawer-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+}
+
+body.cart-open {
+  overflow: hidden;
+}
+
+body.cart-open .cart-drawer-wrap {
+  pointer-events: auto;
+}
+
+.cart-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+body.cart-open .cart-backdrop {
+  opacity: 1;
+}
+
+.cart-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(380px, 100%);
+  height: 100%;
+  background: #fff;
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.08);
+  transform: translateX(100%);
+  transition: transform 0.22s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 24px 32px;
+}
+
+body.cart-open .cart-drawer {
+  transform: translateX(0);
+}
+
+.cart-drawer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.cart-drawer h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #111;
+}
+
+.cart-close {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.cart-close::before,
+.cart-close::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 8px;
+  width: 20px;
+  height: 2px;
+  background: #8b8b8b;
+}
+
+.cart-close::before {
+  transform: rotate(45deg);
+}
+
+.cart-close::after {
+  transform: rotate(-45deg);
+}
+
+.cart-empty {
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+  margin-top: 48px;
+}
+
 .mobile-bar {
   display: none;
 }
@@ -574,6 +668,12 @@ html.lightbox-active body {
 .product-card .price {
   font-size: 16px;
   color: #444;
+  margin-top: 4px;
+}
+
+.product-card .stock-out {
+  color: #c41212;
+  font-size: 13px;
   margin-top: 4px;
 }
 

@@ -108,7 +108,46 @@
     });
   }
 
-  document.querySelectorAll(".cart-btn, .add-cart").forEach(function (btn) {
+  var cartDrawer = document.querySelector(".cart-drawer-wrap");
+  if (!cartDrawer) {
+    cartDrawer = document.createElement("div");
+    cartDrawer.className = "cart-drawer-wrap";
+    cartDrawer.innerHTML =
+      '<div class="cart-backdrop" tabindex="-1"></div>' +
+      '<aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">' +
+        '<div class="cart-drawer-head">' +
+          '<h2 id="cart-title">Cart</h2>' +
+          '<button type="button" class="cart-close" aria-label="Close cart"></button>' +
+        "</div>" +
+        '<p class="cart-empty">Your cart is empty.</p>' +
+      "</aside>";
+    document.body.appendChild(cartDrawer);
+  }
+
+  function openCart() {
+    document.body.classList.add("cart-open");
+    var closeBtn = cartDrawer.querySelector(".cart-close");
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeCart() {
+    document.body.classList.remove("cart-open");
+  }
+
+  document.querySelectorAll(".cart-btn").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      openCart();
+    });
+  });
+
+  cartDrawer.querySelector(".cart-backdrop").addEventListener("click", closeCart);
+  cartDrawer.querySelector(".cart-close").addEventListener("click", closeCart);
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && document.body.classList.contains("cart-open")) closeCart();
+  });
+
+  document.querySelectorAll(".add-cart").forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       toast("currently out of stock");
