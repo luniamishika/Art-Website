@@ -161,6 +161,10 @@ a:hover {
   padding-top: 0;
 }
 
+body.work #content {
+  padding-top: 12px;
+}
+
 .masonry {
   position: relative;
 }
@@ -277,7 +281,7 @@ a:hover {
 
 body.work .back-link {
   display: block;
-  margin: 0 auto 24px;
+  margin: 0 auto 12px;
   text-align: center;
 }
 
