@@ -283,6 +283,7 @@ body.work .back-link {
   display: inline-block;
   margin: 0 0 8px 2%;
   text-align: left;
+  font-size: 17px;
 }
 
 .work-more {
