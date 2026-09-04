@@ -157,6 +157,10 @@ a:hover {
   min-height: 100vh;
 }
 
+.store #content {
+  padding-top: 0;
+}
+
 .masonry {
   position: relative;
 }
@@ -197,6 +201,45 @@ a:hover {
 
 .asset .black::after {
   content: "coming soon";
+}
+
+.piece-detail {
+  scroll-margin-top: 72px;
+  padding: 28px 2% 80px;
+}
+
+.piece-up {
+  display: inline-block;
+  background: none;
+  border: 0;
+  color: #2c2c2c;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.piece-detail-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 1100px;
+}
+
+.piece-detail-inner img {
+  width: 100%;
+}
+
+.piece-info h2 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.piece-info p {
+  color: var(--text);
 }
 
 .cart-btn {
@@ -452,7 +495,10 @@ html.lightbox-active body {
   font-weight: 400;
   color: #2c2c2c;
   text-align: center;
-  padding: 0 2% 24px;
+  padding: 0 2% 16px;
+  margin: 0;
+  line-height: 1.2;
+  text-transform: none;
 }
 
 .product-card {
@@ -625,7 +671,8 @@ html.lightbox-active body {
   }
 
   .about-hero,
-  .product-detail {
+  .product-detail,
+  .piece-detail-inner {
     grid-template-columns: 1fr;
   }
 

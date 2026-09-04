@@ -37,8 +37,8 @@
       <!-- TODO: replace black placeholders with real photos. Then make each
            .asset a clickable image again so the lightbox opens. -->
       <div class="masonry">
-        <div class="asset" data-full="images/ceramics/gallery-01.png"><img src="images/ceramics/gallery-01.png" alt="Four ceramic vessels" /></div>
-        <div class="asset" data-full="images/ceramics/gallery-02.png"><img src="images/ceramics/gallery-02.png" alt="Handmade ceramic teapot on a stone ledge" /></div>
+        <div class="asset" data-full="images/ceramics/gallery-01.png" data-title="Vessels" data-copy="Four vessels in stoneware and earthenware. Thrown forms, each with its own weight and silhouette. Made in the studio, to be lived with."><img src="images/ceramics/gallery-01.png" alt="Four ceramic vessels" /></div>
+        <div class="asset" data-full="images/ceramics/gallery-02.png" data-title="Teapot" data-copy="A wheel-thrown teapot. Cream and brown glaze, short spout, made to be held and poured from."><img src="images/ceramics/gallery-02.png" alt="Handmade ceramic teapot on a stone ledge" /></div>
         <div class="asset"><span class="black" style="aspect-ratio: 700 / 933"></span></div>
         <div class="asset"><span class="black" style="aspect-ratio: 700 / 933"></span></div>
         <div class="asset"><span class="black" style="aspect-ratio: 700 / 701"></span></div>
@@ -52,6 +52,16 @@
         <div class="asset"><span class="black" style="aspect-ratio: 700 / 937"></span></div>
         <div class="asset"><span class="black" style="aspect-ratio: 700 / 933"></span></div>
       </div>
+      <section id="piece-detail" class="piece-detail" hidden>
+        <button type="button" class="piece-up">↑ back up</button>
+        <div class="piece-detail-inner">
+          <img alt="" />
+          <div class="piece-info">
+            <h2></h2>
+            <p></p>
+          </div>
+        </div>
+      </section>
       <div id="lightbox" class="lightbox">
         <button class="close" aria-label="Close"></button>
         <button class="nav-btn prev" aria-label="Previous">‹</button>
