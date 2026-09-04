@@ -314,6 +314,10 @@ body.work .back-link {
   display: block;
 }
 
+.mobile-bar {
+  display: none;
+}
+
 .hamburger {
   width: 28px;
   height: 18px;
@@ -696,7 +700,7 @@ html.lightbox-active body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 52px 14px 16px;
+    padding: 10px 16px;
     position: sticky;
     top: 0;
     background: #fff;
@@ -706,6 +710,18 @@ html.lightbox-active body {
   .mobile-bar .logo {
     font-size: 18px;
     margin: 0;
+    padding-right: 8px;
+  }
+
+  .mobile-bar .hamburger {
+    margin-right: 48px;
+    flex-shrink: 0;
+  }
+
+  .cart-btn {
+    top: 6px;
+    right: 8px;
+    z-index: 41;
   }
 
   #content {
