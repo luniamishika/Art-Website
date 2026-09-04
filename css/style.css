@@ -157,12 +157,9 @@ a:hover {
   min-height: 100vh;
 }
 
-.store #content {
-  padding-top: 36px;
-}
-
+.store #content,
 body.work #content {
-  padding-top: 12px;
+  padding-top: 36px;
 }
 
 .masonry {
