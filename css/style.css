@@ -748,6 +748,10 @@ html.lightbox-active body {
   color: var(--muted);
 }
 
+body.product .back-link {
+  font-size: 17px;
+}
+
 .toast {
   position: fixed;
   left: 50%;
@@ -840,6 +844,12 @@ html.lightbox-active body {
   .product-detail,
   .piece-detail-inner {
     grid-template-columns: 1fr;
+  }
+
+  .product-detail img {
+    width: 70%;
+    max-width: 260px;
+    margin: 0 auto 16px;
   }
 
   .product-grid {
