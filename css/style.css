@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap");
 
 :root {
-  --gold: #fbc22d;
+  --hover: #6b2a32;
   --muted: #6a6a6a;
   --text: #444;
   --logo: #0e0e0e;
   --icon: #c6c6c6;
   --sidebar: 250px;
+  --bg: #fbfaf8;
 }
 
 *,
@@ -19,7 +20,7 @@
 
 html,
 body {
-  background: #fff;
+  background: var(--bg);
   color: var(--text);
   font-family: "Source Sans 3", "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -40,7 +41,7 @@ a {
 }
 
 a:hover {
-  color: var(--gold);
+  color: var(--hover);
 }
 
 .site {
@@ -55,7 +56,7 @@ a:hover {
   height: 100vh;
   overflow: auto;
   padding: 4% 40px 60px 3%;
-  background: #fff;
+  background: var(--bg);
   z-index: 20;
 }
 
@@ -96,7 +97,7 @@ a:hover {
 #menu a:hover,
 #menu a:focus,
 #menu li.selected a {
-  color: var(--gold);
+  color: var(--hover);
 }
 
 .social_icons {
@@ -120,7 +121,7 @@ a:hover {
 }
 
 .social-icon-link:hover {
-  color: var(--gold);
+  color: var(--hover);
 }
 
 .social-icon {
@@ -140,7 +141,7 @@ a:hover {
 }
 
 #share_button a:hover {
-  color: var(--gold);
+  color: var(--hover);
 }
 
 .post_text {
@@ -353,7 +354,7 @@ body.cart-open .cart-backdrop {
   right: 0;
   width: min(380px, 100%);
   height: 100%;
-  background: #fff;
+  background: var(--bg);
   box-shadow: -8px 0 24px rgba(0, 0, 0, 0.08);
   transform: translateX(100%);
   transition: transform 0.22s ease;
@@ -475,7 +476,7 @@ html.lightbox-active body {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(251, 250, 248, 0.96);
   z-index: 100;
   align-items: center;
   justify-content: center;
@@ -634,7 +635,7 @@ html.lightbox-active body {
 
 .collection-tabs a:hover,
 .collection-tabs a.active {
-  color: #000;
+  color: var(--hover);
 }
 
 .product-grid {
@@ -726,7 +727,7 @@ html.lightbox-active body {
   padding: 10px 22px;
   border: 1px solid rgba(68, 68, 68, 0.2);
   border-radius: 24px;
-  background: #fff;
+  background: var(--bg);
   font-family: inherit;
   font-size: 14px;
   cursor: pointer;
@@ -819,7 +820,7 @@ body.product .back-link {
     min-height: 56px;
     position: sticky;
     top: 0;
-    background: #fff;
+    background: var(--bg);
     z-index: 30;
   }
 
