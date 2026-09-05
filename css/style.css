@@ -276,6 +276,14 @@ body.work #content {
   margin: 0 auto;
 }
 
+.work-page .work-more img {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
 body.work .back-link {
   display: inline-block;
   margin: 0 0 8px 2%;
